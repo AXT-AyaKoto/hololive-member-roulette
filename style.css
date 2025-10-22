@@ -7,17 +7,18 @@
 /* ==== 'M PLUS 1 Code' - 等幅フォント ==== */
 /* ==== 'Zen Kurenaido' - 手書きフォント ==== */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zen+Kurenaido&display=swap');
-/* ==== 'Font Awesome 6 Free' - アイコンフォント ==== */
-@import url('https://use.fontawesome.com/releases/v6.5.2/css/all.css');
+/* ==== 'Font Awesome 7 Free' - アイコンフォント ==== */
+@import url('https://use.fontawesome.com/releases/v7.1.0/css/all.css');
 
 /* =================================================================================
     色変数
 ================================================================================== */
 
 :root {
-    --brand: #27c7ff;
-    --base: oklch(from var(--brand) 0.90 0.033 h);
-    --text: oklch(from var(--brand) 0.25 0.00 h);
+    color-scheme: light dark;
+    --brand: #222244;
+    --base: light-dark(oklch(from var(--brand) 0.90 0.033 h), oklch(from var(--brand) 0.25 0.033 h));
+    --text: light-dark(oklch(from var(--brand) 0.25 0.00 h), oklch(from var(--brand) 0.90 0.00 h));
     --shadow-light: oklch(from var(--base) calc(l + 0.07) c h);
     --shadow-dark: oklch(from var(--base) calc(l - 0.07) c h);
 }
@@ -213,7 +214,7 @@ main {
     min-width: 320px;
     max-width: 1000px;
     margin-inline: auto;
-    margin-block: 2rem;
+    padding-block: 2rem;
 
     &>hgroup {
         text-align: center;
@@ -229,5 +230,42 @@ main {
             font-size: 1rem;
             font-weight: 300;
         }
+    }
+}
+
+nav {
+    position: relative;
+
+    &>a.neumorphism-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--text);
+
+        &>i {
+            font-size: 24px;
+        }
+    }
+}
+
+footer {
+    width: 60%;
+    min-width: 320px;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-block: 1rem;
+    text-align: center;
+
+    &>small {
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 1.5;
+        opacity: 0.7;
     }
 }
