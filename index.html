@@ -10,7 +10,7 @@
     <!-- ==== OGP設定 ==== -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="ホロライブメンバールーレット">
-    <meta property="og:description" content="ホロライブのメンバーを一人選ぶためのルーレットアプリです。">
+    <meta property="og:description" content="ホロライブのメンバーを選ぶためのルーレットです。">
     <meta property="og:image" content="https://axtech.dev/assets/images/icons/Ayasaka-Koto/background.svg">
     <meta name="twitter:card" content="summary">
     <!-- ファイル読み込み -->
@@ -24,49 +24,95 @@
             <h1>ホロライブメンバールーレット</h1>
             <p>ホロライブのメンバーを選ぶだけ。</p>
         </hgroup>
-        <section class="section_roulette">
-            <div class="result">
-                <div class="canvas_area neumorphism-down">
-                    <canvas width="2000" height="2000"></canvas>
-                </div>
-            </div>
-            <div class="operations">
-                <button id="start_button">ルーレット開始</button>
-                <button id="stop_button" disabled>ルーレット停止</button>
-                <button id="reset_button" disabled>リセット</button>
-            </div>
+        <section class="section_result">
+            <ul class="results">
+                <template id="result_item_template">
+                    <li class="result_item neumorphism-down">
+                        <img src="./images/question-mark.svg" alt="？" class="icon">
+                        <p class="name">？？？</p>
+                    </li>
+                </template>
+            </ul>
         </section>
-        <section class="section_config">
-            <h2>オプション</h2>
-            <details class="config_group" open>
-                <summary class="config_group_summary">卒業タレント等</summary>
-                <div class="config_group_inner">
-                    <ul>
-                        <li><input type="checkbox" name="include_graduated" id="include_graduated" checked><label for="include_graduated">卒業したタレントを含める</label></li>
-                        <li><input type="checkbox" name="include_concluded" id="include_concluded" checked><label for="include_concluded">配信活動を終了したタレントを含める</label></li>
-                        <li><input type="checkbox" name="include_terminated" id="include_terminated"><label for="include_terminated">契約を終了したタレントを含める</label></li>
+        <section class="section_operations">
+            <button id="draw_button">DRAW</button>
+        </section>
+        <section class="section_options">
+            <details class="options_group">
+                <summary>対象グループ</summary>
+                <div class="options_group_inner">
+                    <ul class="options_list">
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="JP" checked>
+                                hololive
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="EN" checked>
+                                hololive English
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="ID" checked>
+                                hololive Indonesia
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="DEV_IS" checked>
+                                hololive DEV_IS
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </details>
-            <details class="config_group">
-                <summary class="config_group_summary">グループ(EN, ID, DEV_IS)</summary>
-                <div class="config_group_inner">
-                    <ul>
-                        <li><input type="checkbox" name="include_jp" id="include_jp" checked><label for="include_jp">ホロライブ(JP)メンバーを含める</label></li>
-                        <li><input type="checkbox" name="include_en" id="include_en" checked><label for="include_en">hololive Englishメンバーを含める</label></li>
-                        <li><input type="checkbox" name="include_id" id="include_id" checked><label for="include_id">hololive Indonesiaメンバーを含める</label></li>
-                        <li><input type="checkbox" name="include_dev_is" id="include_dev_is" checked><label for="include_dev_is">hololive DEV_ISメンバーを含める</label></li>
+            <details class="options_group">
+                <summary>卒業生等の扱い</summary>
+                <div class="options_group_inner">
+                    <ul class="options_list">
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="statuses[]" class="option_checkbox" value="graduated" checked>
+                                卒業タレントも含める
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="statuses[]" class="option_checkbox" value="concluded" checked>
+                                配信活動終了タレントも含める
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="statuses[]" class="option_checkbox" value="terminated">
+                                契約終了タレント等も含める
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details class="options_group" open>
+                <summary>その他のオプション</summary>
+                <div class="options_group_inner">
+                    <ul class="options_list">
+                        <li class="option_item">
+                            <label>
+                                引く人数: <input type="number" value="1" min="1" step="1" id="number_of_draws">
+                            </label>
+                        </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" id="allow_duplicates" checked>
+                                重複を許す
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </details>
         </section>
-    </main>
-    <template id="result_item_template">
-        <div class="result_item">
-            <img class="result_item_image" src="" alt="">
-            <p class="result_item_name"></p>
-        </div>
-    </template>
 </body>
 
 </html>

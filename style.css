@@ -95,13 +95,123 @@ body {
 }
 
 /* =================================================================================
+    各セクション
+================================================================================== */
+
+.section_result {
+    &>.results {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-content: space-between;
+        justify-content: space-around;
+        padding-left: 0;
+
+        &>.result_item {
+            width: 150px;
+            list-style-type: none;
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: 0rem;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            &>img {
+                width: 100%;
+                aspect-ratio: 1;
+                height: auto;
+                z-index: -1;
+            }
+
+            &>p {
+                font-size: 0.9rem;
+                line-height: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.section_operations {
+    margin-block: 1.5rem;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    &>button {
+        width: 100px;
+        height: 100%;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.section_options {
+    margin-block: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+
+    &>details.options_group {
+        width: 100%;
+
+        &>summary {
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        &>.options_group_inner {
+            &>.options_list {
+                margin-top: 1rem;
+
+                &>.option_item {
+
+                    &>label {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        cursor: pointer;
+
+                        &>input[type="checkbox"],
+                        &>input[type="radio"] {
+                            width: 16px;
+                            height: 16px;
+                            cursor: pointer;
+                        }
+
+                        &>input[type=number] {
+                            width: 60px;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section_options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =================================================================================
     以下、個別スタイル
 ================================================================================== */
 
 main {
     width: 60%;
     min-width: 320px;
-    max-width: 800px;
+    max-width: 1000px;
     margin-inline: auto;
     margin-block: 2rem;
 
@@ -118,46 +228,6 @@ main {
         &>p {
             font-size: 1rem;
             font-weight: 300;
-        }
-    }
-
-    &>section {
-        margin-block: 2rem;
-    }
-
-    &>.section_roulette {
-
-        &>div.result {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 16px;
-            gap: 4px;
-
-            &>.canvas_area {
-                display: block;
-                grid-column: 1 / 2;
-                width: 100%;
-                height: auto;
-                border-radius: calc(1px * Infinity);
-
-                &>canvas {
-                    width: 100%;
-                    height: auto;
-                    border-radius: calc(1px * Infinity);
-                }
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                grid-column: 2 / 3;
-                width: 16px;
-                height: 16px;
-                align-self: center;
-                justify-self: center;
-                background-color: var(--text);
-                clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
-            }
         }
     }
 }
