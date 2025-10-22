@@ -1,9 +1,17 @@
+//@ts-check
+
 /**
  * @typedef {string} LangTag - TODO: あとでUnion型にしてください
  */
+/**
+ * @typedef {"JP"|"EN"|"ID"|"DEV_IS"} Group - 便宜上JPを使います 許して
+ */
+/**
+ * @typedef {"active"|"graduated"|"concluded"|"terminated"} TalentsStatus - graduated: 卒業 concluded: 活動終了 terminated: 契約終了
+ */
 
 /**
- * @type {Array<{name: Object<LangTag, string>, color: string, tag: string[]}>}
+ * @type {Array<{name: Object<LangTag, string>, color: string, group: Group, status: TalentsStatus}>}
  */
 const talents = [
     {
@@ -12,10 +20,8 @@ const talents = [
             "en_US": "Tokino Sora",
         },
         "color": "#245eff",
-        "tag": [
-            "ホロライブ",
-            "ホロライブ > 0期生",
-        ]
+        "group": "JP",
+        "status": "active",
     },
     {
         "name": {
@@ -23,10 +29,8 @@ const talents = [
             "en_US": "Robocosan",
         },
         "color": "#a36694",
-        "tag": [
-            "ホロライブ",
-            "ホロライブ > 0期生",
-        ]
+        "group": "JP",
+        "status": "active",
     },
 ];
 

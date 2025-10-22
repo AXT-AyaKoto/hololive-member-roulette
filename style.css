@@ -15,10 +15,9 @@
 ================================================================================== */
 
 :root {
-    color-scheme: light dark;
-    --brand: #222244;
-    --base: light-dark(oklch(from var(--brand) 0.90 0.033 h), oklch(from var(--brand) 0.25 0.033 h));
-    --text: light-dark(oklch(from var(--brand) 0.25 0.00 h), oklch(from var(--brand) 0.90 0.00 h));
+    --brand: #27c7ff;
+    --base: oklch(from var(--brand) 0.90 0.033 h);
+    --text: oklch(from var(--brand) 0.25 0.00 h);
     --shadow-light: oklch(from var(--base) calc(l + 0.07) c h);
     --shadow-dark: oklch(from var(--base) calc(l - 0.07) c h);
 }

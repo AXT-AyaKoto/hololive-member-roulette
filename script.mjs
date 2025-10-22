@@ -30,13 +30,17 @@ const $ = selector => document.querySelector(selector);
  */
 const $$ = selector => Array.from(document.querySelectorAll(selector));
 
-/**
- * Service Workerの登録
- */
-if ('serviceWorker' in navigator) {
-    const registration = navigator.serviceWorker.register('_service-worker.js')
-}
-
 /** ================================================================================================
- * 以下、本体
+ * 初期化処理
 ================================================================================================= */
+// .result_areaに各メンバーの要素を追加する
+import { talents } from "./data/talent-list.mjs";
+const userLanguage = navigator.language || "ja-JP";
+const resultArea = /** @type {HTMLElement} */ ($(".result_area"));
+talents.forEach(talent => {
+    const talentElem = document.createElement("div");
+    talentElem.classList.add("talent_item");
+    talentElem.style.borderColor = talent.color;
+    talentElem.textContent = talent.name[userLanguage] || talent.name["ja_JP"] || "---";
+    resultArea.appendChild(talentElem);
+});

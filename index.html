@@ -19,7 +19,40 @@
 </head>
 
 <body>
-
+    <main>
+        <hgroup>
+            <h1>ホロライブメンバールーレット</h1>
+            <p>ホロライブのメンバーを一人選ぶだけ。</p>
+        </hgroup>
+        <section class="section_roulette">
+            <div class="result"></div>
+            <div class="operations">
+                <button id="start_button">ルーレット開始</button>
+                <button id="stop_button" disabled>ルーレット停止</button>
+                <button id="reset_button" disabled>リセット</button>
+            </div>
+        </section>
+        <section class="section_config">
+            <h2>オプション</h2>
+            <details class="config_group">
+                <summary class="config_group_summary"></summary>
+                <div class="config_group_inner">
+                    <h3>対象とするタレント</h3>
+                    <ul>
+                        <li><input type="checkbox" name="all_talents" id="all_talents"><label for="all_talents"></label></li>
+                    </ul>
+                </div>
+            </details>
+            <details class="config_group">
+                <summary class="config_group_summary"></summary>
+                <div class="config_group_inner"></div>
+            </details>
+            <details class="config_group">
+                <summary class="config_group_summary"></summary>
+                <div class="config_group_inner"></div>
+            </details>
+        </section>
+    </main>
 </body>
 
 </html>
