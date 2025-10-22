@@ -11,23 +11,17 @@
  */
 
 /**
- * @type {Array<{name: Object<LangTag, string>, color: string, group: Group, status: TalentsStatus}>}
+ * @type {Array<{name: string, color: string, group: Group, status: TalentsStatus}>}
  */
 const talents = [
     {
-        "name": {
-            "ja_JP": "ときのそら",
-            "en_US": "Tokino Sora",
-        },
+        "name": "ときのそら",
         "color": "#245eff",
         "group": "JP",
         "status": "active",
     },
     {
-        "name": {
-            "ja_JP": "ロボ子さん",
-            "en_US": "Robocosan",
-        },
+        "name": "ロボ子さん",
         "color": "#a36694",
         "group": "JP",
         "status": "active",

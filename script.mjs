@@ -36,7 +36,7 @@ const $$ = selector => Array.from(document.querySelectorAll(selector));
 // .result_areaに各メンバーの要素を追加する
 import { talents } from "./data/talent-list.mjs";
 const userLanguage = navigator.language || "ja-JP";
-const resultArea = /** @type {HTMLElement} */ ($(".result_area"));
+const resultArea = /** @type {HTMLElement} */ ($(".result"));
 talents.forEach(talent => {
     const talentElem = document.createElement("div");
     talentElem.classList.add("talent_item");
