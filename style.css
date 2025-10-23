@@ -109,7 +109,7 @@ body {
         padding-left: 0;
 
         &>.result_item {
-            width: 150px;
+            width: 180px;
             list-style-type: none;
             text-align: center;
             display: grid;
@@ -210,7 +210,7 @@ body {
 ================================================================================== */
 
 main {
-    width: 60%;
+    width: calc(100% - 4rem);
     min-width: 320px;
     max-width: 1000px;
     margin-inline: auto;
