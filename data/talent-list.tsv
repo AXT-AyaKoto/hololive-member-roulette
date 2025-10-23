@@ -1,0 +1,78 @@
+name	color	group	status	icon_filename
+ときのそら	#245eff	JP	active	tokino_sora.png
+ロボ子さん	#a36694	JP	active	robocosan.png
+さくらみこ	#ff9cb4	JP	active	sakura_miko.png
+星街すいせい	#50e5f9	JP	active	hoshimachi_suisei.png
+AZKi	#f4348b	JP	active	azki.png
+白上フブキ	#76dfff	JP	active	shirakami_fubuki.png
+夏色まつり	#ffa227	JP	active	natsuiro_matsuri.png
+アキ・ローゼンタール	#ff1c9a	JP	active	aki_rosenthal.png
+赤井はあと	#fc123f	JP	active	akai_haato.png
+夜空メル	#ffdd17	JP	terminated	yozora_mel.png
+大空スバル	#e0ff2c	JP	active	ozora_subaru.png
+癒月ちょこ	#ff6e9b	JP	active	yuzuki_choco.png
+百鬼あやめ	#ed3a4f	JP	active	nakiri_ayame.png
+紫咲シオン	#ad6ce0	JP	graduated	murasaki_shion.png
+湊あくあ	#ffa6ea	JP	graduated	minato_aqua.png
+大神ミオ	#ff314a	JP	active	ookami_mio.png
+猫又おかゆ	#e27dfd	JP	active	nekomata_okayu.png
+戌神ころね	#ffcc29	JP	active	inugami_korone.png
+兎田ぺこら	#88d2ff	JP	active	usada_pekora.png
+白銀ノエル	#89939d	JP	active	shirogane_noel.png
+不知火フレア	#ff5028	JP	active	shiranui_flare.png
+宝鐘マリン	#ca3c28	JP	active	houshou_marin.png
+潤羽るしあ	#30f9d2	JP	terminated	uruha_rushia.png
+天音かなた	#99d8ff	JP	active	amane_kanata.png
+常闇トワ	#cabaff	JP	active	tokoyami_towa.png
+姫森ルーナ	#fe84c2	JP	active	himekawa_luna.png
+角巻わため	#fff29e	JP	active	tsunomaki_watame.png
+桐生ココ	#fe8b04	JP	graduated	kiryu_coco.png
+桃鈴ねね	#fe7a0f	JP	active	momosuzu_nene.png
+尾丸ポルカ	#cf2830	JP	active	omaru_polka.png
+雪花ラミィ	#6bcdf8	JP	active	yukihana_lamy.png
+獅白ぼたん	#a3e5cf	JP	active	shishiro_botan.png
+魔乃アロエ	#f78ac4	JP	terminated	mano_aloe.png
+ラプラス・ダークネス	#936cc6	JP	active	laplus_darknesss.png
+鷹嶺ルイ	#831550	JP	active	takane_lui.png
+博衣こより	#ffacd3	JP	active	hakui_koyori.png
+風真いろは	#93dcd8	JP	active	kazama_iroha.png
+沙花叉クロヱ	#cf4c4a	JP	concluded	sakamata_chloe.png
+火威青	#1d3467	DEV_IS	graduated	hiodoshi_ao.png
+一条莉々華	#f47da9	DEV_IS	active	ichijo_ririka.png
+音乃瀬奏	#ffe7b5	DEV_IS	active	otonose_kanade.png
+儒烏風亭らでん	#3c7c71	DEV_IS	active	juufuutei_raden.png
+轟はじめ	#b6b9ff	DEV_IS	active	todoroki_hajime.png
+響咲リオナ	#fe3480	DEV_IS	active	isaki_riona.png
+虎金妃笑虎	#f58017	DEV_IS	active	koganei_niko.png
+輪堂千速	#71e5ff	DEV_IS	active	rindo_chihaya.png
+水宮枢	#37baba	DEV_IS	active	minamiya_suu.png
+綺々羅々ヴィヴィ	#ff90cc	DEV_IS	active	kikirara_vivi.png
+Ayunda Risu	#ef8381	ID	active	ayunda_risu.png
+Moona Hoshinova	#b19ddc	ID	active	moona_hoshinova.png
+Airani Iofifteen	#b3ee55	ID	active	airani_iofifteen.png
+Kureiji Ollie	#b7030e	ID	active	kureiji_ollie.png
+Anya Melfissa	#e89c0f	ID	active	anya_melfissa.png
+Pavolia Reine	#0f52ba	ID	active	pavolia_reine.png
+Vestia Zeta	#97a1ae	ID	active	vestia_zeta.png
+Kaela Kovalskia	#dc2528	ID	active	kaela_kovalskia.png
+Kobo Kanaeru	#161c4f	ID	active	kobo_kanaeru.png
+Mori Calliope	#c90d40	EN	active	mori_calliope.png
+Takanashi Kiara	#ff511c	EN	active	takanashi_kiara.png
+Ninomae Ina'nis	#3f3e69	EN	active	ninomae_inanis.png
+Watson Amelia	#f2bd36	EN	concluded	watson_amelia.png
+Gawr Gura	#5d81c7	EN	graduated	gawr_gura.png
+IRyS	#e10e5b	EN	active	irys.png
+Ouro Kronii	#1d1797	EN	active	ouro_kronii.png
+Hakos Baelz	#fe3a2d	EN	active	hakos_baelz.png
+Ceres Fauna	#add198	EN	graduated	ceres_fauna.png
+Nanashi Mumei	#c29371	EN	graduated	nanashi_mumei.png
+Tsukumo Sana	#d583ab	EN	graduated	tsukumo_sana.png
+Shiori Novella	#b8a0cd	EN	active	shiori_novella.png
+Koseki Bijou	#6e5bf4	EN	active	koseki_bijou.png
+Nerissa Ravencroft	#2233fb	EN	active	nerissa_ravencroft.png
+Fuwawa Abyssgard	#67b2ff	EN	active	fuwawa_abyssgard.png
+Mococo Abyssgard	#ff82c9	EN	active	mococo_abyssgard.png
+Elizabeth Rose Bloodflame	#c7383b	EN	active	elizabeth_rose_bloodflame.png
+Gigi Murin	#fdb440	EN	active	gigi_murin.png
+Cecilia Immergreen	#119a5c	EN	active	cecilia_immergreen.png
+Raora Panthera	#e75786	EN	active	raora_panthera.png
