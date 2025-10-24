@@ -69,6 +69,18 @@
                                 hololive DEV_IS
                             </label>
                         </li>
+                        <li class="option_item">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="AN" checked>
+                                holoAN / 事務所スタッフ
+                            </label>
+                        </li>
+                        <li class="option_item" style="display: none;">
+                            <label>
+                                <input type="checkbox" name="groups[]" class="option_checkbox" value="CN">
+                                hololive CN
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </details>
@@ -79,7 +91,7 @@
                         <li class="option_item">
                             <label>
                                 <input type="checkbox" name="statuses[]" class="option_checkbox" value="graduated">
-                                卒業タレントも含める
+                                卒業タレント・退職スタッフも含める
                             </label>
                         </li>
                         <li class="option_item">
@@ -93,6 +105,14 @@
                                 <input type="checkbox" name="statuses[]" class="option_checkbox" value="terminated">
                                 その他タレント(契約終了等)も含める
                             </label>
+                            <ul class="options_list vague_option">
+                                <li class="option_item">
+                                    <label>
+                                        <input type="checkbox" name="statuses[]" class="option_checkbox" value="vague">
+                                        その他タレントのうち、現時点で記録が曖昧なタレントも含める
+                                    </label>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

@@ -198,6 +198,15 @@ body {
     }
 }
 
+.vague_option {
+    display: none;
+
+    .option_item:has(input[type="checkbox"]:checked)>& {
+        display: block;
+    }
+}
+
+
 @media (max-width: 768px) {
     .section_options {
         flex-direction: column;

@@ -73,7 +73,7 @@ const drawTalents = () => {
     const resultItems = $$(".result_item");
 
     // filter条件の取得
-    // グループ(JP, EN, ID, DEV_IS)
+    // グループ(JP, EN, ID, DEV_IS, AN)
     const group_filter = new Set();
     const group_checkboxes = $$(".option_item input[type='checkbox'][name='groups[]']");
     group_checkboxes.forEach(checkbox => {
@@ -81,7 +81,7 @@ const drawTalents = () => {
             group_filter.add(checkbox.value);
         }
     });
-    // 活動状況(現役, 卒業, 活動終了, 契約終了)
+    // 活動状況(現役, 卒業, 活動終了, 契約終了, 特殊)
     const status_filter = new Set(["active"]);
     const status_checkboxes = $$(".option_item input[type='checkbox'][name='statuses[]']");
     status_checkboxes.forEach(checkbox => {
@@ -127,4 +127,18 @@ const drawTalents = () => {
 };
 drawButton.addEventListener("click", () => {
     drawTalents();
+});
+
+
+/** name="statuses[]", value="vague"なcheckboxがcheckedのとき限定で、hololive CNのチェックボックスを追加 */
+const vagueCheckbox = $(`input[type="checkbox"][name="statuses[]"][value="vague"]`);
+const cnCheckboxItem = $(`li.option_item:has(input[type="checkbox"][name="groups[]"][value="CN"])`);
+vagueCheckbox.addEventListener("change", () => {
+    if (vagueCheckbox.checked) {
+        cnCheckboxItem.style.display = "list-item";
+    } else {
+        cnCheckboxItem.style.display = "none";
+        const cnCheckbox = cnCheckboxItem.querySelector(`input[type="checkbox"][name="groups[]"][value="CN"]`);
+        cnCheckbox.checked = false;
+    }
 });
